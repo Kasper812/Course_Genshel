@@ -1,0 +1,163 @@
+@media (max-width: 1200px) {
+    .services-grid-rich {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .doctors-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .reviews-track {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 1040px) {
+    .topline {
+        display: none;
+    }
+
+    :root {
+        --topline-height: 0px;
+    }
+
+    .hero-grid,
+    .contacts-grid,
+    .split-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .stats-strip-grid,
+    .stats-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .theme-toggle .theme-label {
+        display: none;
+    }
+
+    .header-actions .btn {
+        display: none;
+    }
+}
+
+@media (max-width: 920px) {
+    .burger {
+        display: flex;
+    }
+
+    .site-nav {
+        position: fixed;
+        top: var(--header-height);
+        left: 0;
+        right: 0;
+        transform: translateY(-10px);
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.24s ease;
+        border-bottom: 1px solid var(--line);
+        background: var(--bg-soft);
+        display: grid;
+        gap: 6px;
+        padding: 12px;
+    }
+
+    body.nav-open .site-nav {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+}
+
+@media (max-width: 760px) {
+    .container {
+        width: min(1200px, 94%);
+    }
+
+    .section,
+    .page-hero,
+    .hero-luxury {
+        padding-top: 68px;
+        padding-bottom: 62px;
+    }
+
+    .hero-content,
+    .hero-panel,
+    .glass-card,
+    .service-card,
+    .doctor-card,
+    .review-card,
+    .stat-card,
+    .cta-banner,
+    .table-wrap,
+    .address-card {
+        padding: 18px;
+    }
+
+    .services-grid,
+    .services-grid-rich,
+    .stats-strip-grid,
+    .stats-grid,
+    .doctors-grid,
+    .doctors-grid.compact,
+    .reviews-track,
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-actions,
+    .service-controls,
+    .admin-controls,
+    .faq-top,
+    .footer-bottom,
+    .topline-inner {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-wrap {
+        min-width: auto;
+    }
+
+    .admin-controls input,
+    .admin-controls select {
+        max-width: none;
+    }
+
+    .hero-slide {
+        min-height: 220px;
+    }
+
+    .to-top {
+        right: 14px;
+        bottom: 14px;
+    }
+}
+@media (max-width: 1200px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 760px) {
+    .hero-media-grid,
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-thumb {
+        height: 190px;
+    }
+
+    .doctor-photo {
+        height: 260px;
+    }
+}

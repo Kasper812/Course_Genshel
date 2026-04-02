@@ -1,0 +1,20 @@
+[
+    {
+        "id": "calc_15be1d3ca68e",
+        "name": "Тест",
+        "phone": "+7 (999) 123-45-67",
+        "email": "test-redesign@example.com",
+        "service_type": "implants",
+        "service_type_label": "Имплантация",
+        "complexity": "advanced",
+        "urgency": "fast",
+        "team_size": 2,
+        "support_24": true,
+        "comment": "Проверка после интерактивного редизайна",
+        "total": 57533,
+        "source": "calculator",
+        "created_at": "2026-03-21T19:07:21+07:00",
+        "ip": "127.0.0.1",
+        "user_agent": "Mozilla\/5.0 (Windows NT; Windows NT 10.0; ru-RU) WindowsPowerShell\/5.1.26100.7920"
+    }
+]
