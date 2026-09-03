@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentpackage name="Assault Rifle Buff (Lua)" modversion="1.0.0" corepackage="false" gameversion="1.9.0.0">
+  <Other file="%ModDir%/Lua/Autorun/assaultrifle_buff.lua" />
+</contentpackage>
