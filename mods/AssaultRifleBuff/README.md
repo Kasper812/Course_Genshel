@@ -1,32 +1,26 @@
-# Assault Rifle Buff (Barotrauma)
+# Assault Rifle Mk.2 (Barotrauma)
 
-Every vanilla assault rifle fires 5x faster and every assault rifle magazine holds 1488 rounds.
-No key combinations, no custom items — the vanilla items themselves are changed.
+A pure vanilla content package — no LuaCs, no scripts, nothing generated locally. It adds a new
+craftable item instead of touching the existing assault rifle, so installing it never conflicts with
+the base game or other mods.
 
-## Two ways to install
+## What it adds
 
-### 1. Vanilla, no LuaCs (`vanilla/`)
+* **Assault Rifle Mk.2** (`assaultriflemk2`) — a variant of the vanilla assault rifle. Fires 5x
+  faster (`reload`/`reloadnoskill` × 0.2). Fabricating it costs slightly more than the standard
+  rifle (+1 to the first required material, +10s fabrication time).
+* **Assault Rifle Magazine Mk.2** (`assaultriflemagazinemk2`) — a variant of the vanilla magazine,
+  holding 1488 rounds instead of 30 (`health` × 49.6, i.e. 1488/30 — scales with whatever the
+  vanilla per-shot cost happens to be). Also slightly pricier to fabricate.
+* Both are unlocked and crafted the same way as their vanilla counterparts (same fabricator,
+  same skill requirements) — just costing a bit more.
 
-Barotrauma cannot patch a single value of a vanilla item: an override has to contain the full item
-definition. The scripts here build that override automatically from the game's own
-`Content/Items/Weapons/weapons.xml`, so the result always matches the installed game version.
+The Mk.2 rifle can still load a normal magazine, and a normal rifle can still load the Mk.2 magazine.
 
-* Windows: run `vanilla/install.bat` (or `make_mod.ps1`).
-* Any OS: `python3 vanilla/make_mod.py`.
+## Installation
 
-The script finds the game folder, copies every `assaultrifle*` item, divides `reload` and
-`reloadnoskill` by 5, scales the magazine's max condition so it lasts 1488 shots, and writes the
-package to `<game>/LocalMods/AssaultRifleBuff`. Then enable it in Settings → Mods.
+1. Copy the `AssaultRifleBuff` folder to `Barotrauma/LocalMods/`.
+2. Settings → Mods → enable **Assault Rifle Mk.2** → Apply → restart.
+3. Craft it at a fabricator like any other weapon.
 
-Options: `-Rounds` / `-FireRateMultiplier` for PowerShell, `--rounds` / `--fire-rate` for Python.
-
-### 2. LuaCs (`lua/AssaultRifleBuff_Lua/`)
-
-A ready-to-copy package for [LuaCsForBarotrauma](https://github.com/evilfactory/LuaCsForBarotrauma).
-It patches items at runtime: `RangedWeapon.Reload` is divided by 5 and each magazine's
-`HealthMultiplier` is raised to 1488/30. Copy the folder to `LocalMods` and enable it.
-
-## How the ammo count works
-
-A magazine has no round counter: it spends condition per shot (vanilla assault rifle magazine =
-100 condition, 3.3333 per shot = 30 rounds). 1488 rounds means max condition = 3.3333 × 1488.
+Multiplayer: enable on the server too.

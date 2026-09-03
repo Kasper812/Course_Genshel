@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentpackage name="Assault Rifle Mk.2" modversion="1.0.0" corepackage="false" gameversion="1.9.0.0">
+  <Item file="%ModDir%/Items/assaultrifle_mk2.xml" />
+</contentpackage>
