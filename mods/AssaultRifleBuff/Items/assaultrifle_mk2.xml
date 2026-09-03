@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Items>
+  <Item identifier="assaultriflemk2"
+        variantof="assaultrifle"
+        name="Assault Rifle Mk.2"
+        description="Modified assault rifle. Fires 5 times faster than the standard one and takes an extended 1488-round magazine. Slightly more expensive to fabricate than the standard rifle.">
+    <RangedWeapon reload="*0.2" reloadnoskill="*0.2" />
+    <ItemContainer containableitems="assaultriflemagazinemk2,assaultriflemagazine,assaultrifleammo" />
+    <Fabricate requiredtime="+10">
+      <RequiredItem amount="+1" />
+    </Fabricate>
+  </Item>
+
+  <Item identifier="assaultriflemagazinemk2"
+        variantof="assaultriflemagazine"
+        name="Assault Rifle Magazine Mk.2"
+        description="Extended assault rifle magazine. Holds 1488 rounds instead of the standard 30."
+        health="*49.6">
+    <Fabricate requiredtime="+5">
+      <RequiredItem amount="+1" />
+    </Fabricate>
+  </Item>
+</Items>
